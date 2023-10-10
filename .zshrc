@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/overmartinez/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -192,16 +192,12 @@ alias ghfrs="git-hf release start"
 alias ghfrf="git-hf release finish"
 
 ### K8s
-alias aksfirmaretest="export KUBECONFIG=/Users/overmartinez/kubeconfig.eastus.json"
+alias aksfirmaretest="export KUBECONFIG=$HOME/kubeconfig.eastus.json"
 
 ### Electron
 alias eb="electron-builder"
 
-### Apps
-alias jmeter="sh /Users/overmartinez/Projects/apache-jmeter-5.2.1/bin/jmeter.sh"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 ### Export to jmeter, it need java 15
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home/
@@ -209,9 +205,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home/
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="$PATH:/Users/overmartinez/flutter/bin"
-
-export NVM_DIR="/Users/overmartinez/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # bun completions
-[ -s "/Users/overmartinez/.bun/_bun" ] && source "/Users/overmartinez/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
